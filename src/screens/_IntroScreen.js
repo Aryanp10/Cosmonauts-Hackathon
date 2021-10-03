@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
-import { Text, StyleSheet, View, TextInput } from 'react-native';
+import { Text, StyleSheet, View, TextInput, Button } from 'react-native';
 
 const _IntroScreen = () => {
 
   const [name, setName] = useState("");
+
+  function validateName() {
+    return <Text style={styles.textStyle}>Hi {name}! I'm Hermit the Hermit Crab!</Text>
+  }
 
   return (
     <View style={styles.viewStyle}>
@@ -17,7 +21,12 @@ const _IntroScreen = () => {
             value={name}
             onChangeText={(changedText) => setName(changedText)}>
           </TextInput>
+          <Button
+            onPress={() => {validateName}}
+            title="Enter"
+          />
         </View>
+          {validateName}
     </View>
   );
 };
