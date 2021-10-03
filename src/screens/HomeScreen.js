@@ -4,7 +4,11 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from 'react-native';
 const HomeScreen = ( props ) => {
   return (
     <View>
-      <Text style={styles.text}>Welcome to SafeHabit!</Text>
+      <Text style={styles.text}>Welcome to Hermit!</Text>
+      <Button
+        onPress={() => props.navigation.navigate('Intro')}
+        title="Go to Intro screen"
+      />
       <Button
         onPress={() => props.navigation.navigate('Components')}
         title="Go to Components Demo"
@@ -48,6 +52,17 @@ const HomeScreen = ( props ) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 30,
+    textAlign: 'center',
+  },
+  dark: {
+      backgroundColor: 'black',
+      backgroundCard: '#25282c',
+      color: 'white'
+    },
+   light: {
+     backgroundColor: 'white',
+     backgroundCard: '#fff',
+     color: 'black'
   }
 });
 

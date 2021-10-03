@@ -11,9 +11,11 @@ import OptionalRgbScreen from './src/screens/OptionalRgbScreen';
 import TextScreen from './src/screens/TextScreen';
 import MemeTextScreen from './src/screens/MemeTextScreen';
 import BoxScreen from './src/screens/BoxScreen';
+import _IntroScreen from './src/screens/_IntroScreen'
 
 const navigator = createStackNavigator(
   {
+    Intro: _IntroScreen,
     Home: HomeScreen,
     Components: ComponentsScreen,
     List: ListScreen,
@@ -28,10 +30,10 @@ const navigator = createStackNavigator(
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      title: 'SafeHabit',
+      title: 'Hermit',
+      headerTitleAlign: 'center'
     },
-  }
+  },
 );
 
 export default createAppContainer(navigator);
-
